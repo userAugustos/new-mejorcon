@@ -11,9 +11,9 @@ export function Header() {
                 <div className="relative flex overflow-hidden items-center justify-center w-[50px] h-[50px] transform transition-all">
                     <div className="flex flex-col justify-between w-[35px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
                         {menuIsOpen ? (
-                            <div className="absolute items-center justify-between transform transition-all duration-500 top-2.5 group-focus:translate-x-0 flex w-0 group-focus:w-12">
-                                <div className="absolute bg-black h-[2px] w-7 transform transition-all duration-500 rotate-0 delay-300 group-focus:rotate-45"></div>
-                                <div className="absolute bg-black h-[2px] w-7 transform transition-all duration-500 -rotate-0 delay-300 group-focus:-rotate-45"></div>
+                            <div className="absolute items-center justify-between transform transition-all duration-500 top-2.5 group-focus-within:translate-x-0 flex w-0 group-focus-within:w-12">
+                                <div className="absolute bg-black h-[2px] w-7 transform transition-all rotate-up"></div>
+                                <div className="absolute bg-black h-[2px] w-7 transform transition-all rotate-down"></div>
                             </div>
                             )
                             :(<>

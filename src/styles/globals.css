@@ -19,10 +19,36 @@ a {
   text-decoration: none;
 }
 
-.hamburger-transition rect {
-  transition: opacity 0.3s ease-in-out;
+.rotate-up {
+  transform: rotate(0deg);
+  animation-name: rotate-up;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-.hamburger-transition path {
-  transition: opacity 0.3s ease-in-out;
+.rotate-down {
+  transform: rotate(0deg);
+  animation-name: rotate-down;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate-up {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes rotate-down {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
 }
