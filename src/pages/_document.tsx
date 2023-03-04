@@ -4,7 +4,7 @@ import {Header} from "@components/header";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+        <Head />
       <body>
         <Main />
         <NextScript />

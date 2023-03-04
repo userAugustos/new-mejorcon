@@ -46,3 +46,14 @@ Então vamos lá:
   - [ ] Remover completamente aquela seção infinita de posts sugeridos no fim de post (ou é anúncio, não sei)
 
 Dia 2 e sem duvidas, o maior problema é a curva de aprendizado com tailwind, pra fazer algo bonito e responsivo, os componentes prontos em coisas como de codesandbox ou tailwindcomponents, não são tão úties, te destraem e precisam de adaptação pra ser uma solução que faça sentido
+
+Ontem li dois artigos sobre SEO, já que é importante em qualquer página profissional e será bem avaliado nesse teste:
+
+https://blog.logrocket.com/how-next-js-can-help-improve-seo/
+
+https://neilpatel.com/br/blog/melhore-seu-seo/
+
+https://www.greengeeks.com/blog/html-tags-for-seo/
+
+Também encontrei essa lib, que não vou usar, mas vou me basear na forma como ele gera as tags e organiza para o melhor SEO, essa lib é: https://github.com/catnose99/next-head-seo
+e ela usa as melhores práticas do Google Webmaster Guidelines
