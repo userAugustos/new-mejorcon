@@ -55,5 +55,7 @@ https://neilpatel.com/br/blog/melhore-seu-seo/
 
 https://www.greengeeks.com/blog/html-tags-for-seo/
 
+https://ogp.me/
+
 Também encontrei essa lib, que não vou usar, mas vou me basear na forma como ele gera as tags e organiza para o melhor SEO, essa lib é: https://github.com/catnose99/next-head-seo
 e ela usa as melhores práticas do Google Webmaster Guidelines

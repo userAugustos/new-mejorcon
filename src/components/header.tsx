@@ -1,5 +1,4 @@
 import {useState} from "react";
-import { HamburgerMenu } from "@components/menu";
 import Link from "next/link";
 import Image from "next/image";
 export function Header() {
