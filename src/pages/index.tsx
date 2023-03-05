@@ -1,7 +1,12 @@
 import { Header } from "@components/header";
 import Head from "next/head";
+import {MenuContextProvider, useMenuContext} from "@hooks/useMenu";
+import {Menu} from "@components/menu";
+import {Recomended} from "@components/Recomended";
 
 export default function Index() {
+    const { menuIsOpen } = useMenuContext()
+    console.debug("state of menu in home", menuIsOpen)
   return (
     <>
         <Head>
@@ -12,8 +17,8 @@ export default function Index() {
             <meta name="og:type" content="article." />
         </Head>
       <Header />
-        <div className="p-4 m-3">
-            hello
+        <div>
+            { menuIsOpen ? <Menu /> : <Recomended /> }
         </div>
     </>
   )
