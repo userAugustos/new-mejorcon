@@ -7,6 +7,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cdn.atomik.vip'
       },
+      {
+        protocol: 'https',
+        hostname: 'beta.mejorconsalud.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.dribbble.com'
+      }
     ],
   },
 }

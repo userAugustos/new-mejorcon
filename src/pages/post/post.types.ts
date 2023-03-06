@@ -4,7 +4,7 @@ export interface IPost {
     link: string,
     permalink: string,
     title: string,
-    headline: string,
+    headline?: string,
     excerpt: string,
     featured_media: featuredMedia,
     categories: categoriesItem[],

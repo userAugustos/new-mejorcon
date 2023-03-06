@@ -38,10 +38,10 @@ Então vamos lá:
 - O Maior problema que posso ter aqui, é com tailwind, eu não vou mudar pra SCSS seria confortável, mas tailwind é belo também, então vamos de passo a passo:
 
 - O que vai aconter:
-  - [ ] Mobile First (Everywere)
+  - [x] Mobile First (Everywere)
   - [x] Dark Mode
-  - [ ] Header Como a do site oficial
-  - [ ] Mudar os posts da página inical para ficar como do dev.to (acho bem legal)
+  - [x] Header Como a do site oficial
+  - [x] Mudar os posts da página inical para ficar como do dev.to (acho bem legal)
   - [ ] Alterar posição de itens na leitura de um post
   - [ ] Remover completamente aquela seção infinita de posts sugeridos no fim de post (ou é anúncio, não sei)
 
@@ -59,3 +59,11 @@ https://ogp.me/
 
 Também encontrei essa lib, que não vou usar, mas vou me basear na forma como ele gera as tags e organiza para o melhor SEO, essa lib é: https://github.com/catnose99/next-head-seo
 e ela usa as melhores práticas do Google Webmaster Guidelines
+
+agora que vi que estou passando props por 2 componentes, pensei em ssr with component level fetching
+e isso é espetacular: https://medium.com/@A__G__B/component-level-data-fetching-in-next-js-with-srr-8d35cdc5849e
+
+Também existe outro problema, como estou querendo melhor a interface e quantidade de dados que o usuário pode acessar na home, estou lidando com over rendering SSR. O que puxo não é o essencial (os posts)
+Vamos resolver isso
+1 hora depois, alguns problemas tentando fazer as coisas funcionarem da forma mais rapida possivel sem usar o swc(biblioteca da galera da vercel), acabei indo com o fetching padrão e cache mesmo.
+

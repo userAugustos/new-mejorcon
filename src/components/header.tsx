@@ -6,7 +6,7 @@ import { useMenuContext } from "@hooks/useMenu";
 export function Header() {
     const { menuIsOpen, sweepMenu } = useMenuContext()
     return (
-        <header className="p-1 px-8 h-16 min-h-fit flex items-center justify-between space-x-2.5 mx-auto bg-white shadow-md shadow-color-red dark:bg-gray-800">
+        <header className="p-1 px-8 h-16 min-h-fit flex items-center justify-between space-x-2.5 mx-auto bg-white shadow-md shadow-color-red dark:bg-gray-800 sticky top-0 lg:justify-around">
             <button className="relative group" onClick={() => sweepMenu()}>
                 <div className="relative flex overflow-hidden items-center justify-center w-[50px] h-[50px] transform transition-all">
                     <div className="flex flex-col justify-between w-[35px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
