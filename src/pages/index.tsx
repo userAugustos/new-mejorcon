@@ -17,7 +17,6 @@ export default function Index({ postsByRelevance }: { postsByRelevance: { data: 
             <meta name="og:title" property="og:title" content="Mejor con Salud" />
             <meta name="og:type" content="article." />
         </Head>
-      <Header />
         { menuIsOpen ? <Menu /> : <Recomended posts={postsByRelevance} /> }
     </>
   )

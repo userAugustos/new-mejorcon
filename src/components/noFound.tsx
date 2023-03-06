@@ -11,7 +11,7 @@ export const NoFound = () => {
                 priority
             />
             <span>
-                Não encontramos nada...
+                Não existem artigos relacionados ao termo pesquisado!
             </span>
         </div>
     )
