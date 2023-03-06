@@ -11,7 +11,6 @@ export function Menu() {
     const {loading = false, posts} = Search(searchTerm, byRelevance, currentPage);
 
     const handleInputChange = (event: FormEvent<HTMLInputElement>) => {
-        console.debug(event.currentTarget.value);
         setCurrentPage(1);
         setSearchTerm(event.currentTarget.value);
     };

@@ -14,30 +14,34 @@ export function Search(searchTerm: string, relevance: boolean = false, page: num
         const controller = new AbortController();
         const signal = controller.signal;
 
-        setLoading(true);
+        let timeout = setTimeout(() => {
+            setLoading(true);
 
-        fetch(`https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts?search=${searchTerm}&per_page=6&page=${page}${relevance && '&orderby=relevance'}`, { signal })
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error('Request failed');
-                }
-            })
-            .then(data => {
-                setPosts(data);
-                setLoading(false);
-            })
-            .catch(error => {
-                if (error.name !== 'AbortError') {
-                    console.error(error);
+            fetch(`https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts?search=${searchTerm}&per_page=6&page=${page}${relevance && '&orderby=relevance'}`, { signal })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('Request failed');
+                    }
+                })
+                .then(data => {
+                    setPosts(data);
                     setLoading(false);
-                }
-            });
+                })
+                .catch(error => {
+                    if (error.name !== 'AbortError') {
+                        console.error(error);
+                        setLoading(false);
+                    }
+                });
+        })
 
         return () => {
             controller.abort();
+            clearTimeout(timeout)
         };
+
     }, [searchTerm, page, relevance]);
 
     return { loading, posts };
