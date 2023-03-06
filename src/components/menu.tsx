@@ -31,7 +31,7 @@ export function Menu() {
     }
 
     return (
-        <section className="p-3 mt-2 transition-all duration-500 ease-in-out max-w-[1400px] m-auto flex flex-col justify-center items-center bg-white">
+        <section className="p-3 mt-2 transition-all duration-500 ease-in-out max-w-[1400px] m-auto flex flex-col justify-center items-center bg-white z-10">
             <div className="w-full max-w-[1000px] relative flex flex-row justify-between flex-wrap sm:flex-nowrap">
                 <input
                     type="text"

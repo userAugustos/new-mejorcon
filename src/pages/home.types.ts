@@ -93,7 +93,7 @@ type review = {
     "social_profiles": socialProfiles
 }
 
-type socialProfiles = {
+export type socialProfiles = {
     "twitter"?: string,
         "facebook"?: string,
         "linkedin"?: string,

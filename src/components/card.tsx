@@ -1,11 +1,16 @@
 import {IPost} from "@pages/post/post.types";
 import Image from "next/image";
 import Link from "next/link"
+import {convertDate} from "../utils/convertDate";
+import {useMenuContext} from "@hooks/useMenu";
 export function Card({ post }: { post: IPost} ) {
+    const { closeMenu } = useMenuContext()
+
     return(
         <>
                 <section className="relative border-b bg-white border-gray-200 rounded shadow-lg min-w-[280px] cursor-pointer mb-3 hover:scale-105 hover:bg-blue-50-100 transition-all duration-200 ease-in-out">
-                    <Link href={`/post/${post.id}`}>
+                    {/*queria adicionar uma tela de loading ao carregar item aqui, depois*/}
+                    <Link href={`/post/${post.id}`} rel="nofollow">
                         <Image src={post.featured_media?.medium || '/mejorconsalud.jpg'}
                                alt={post.slug}
                                width={400} height={400}
@@ -21,7 +26,7 @@ export function Card({ post }: { post: IPost} ) {
                                         <span className="text-blue-500">#</span>{category.name}
                                     </div>
                                 ))}
-                                <span className="text-gray-400">{new Date(post.published).toDateString()}</span>
+                                <span className="text-gray-400">{convertDate(post.published)}</span>
                             </div>
                         </div>
                     </Link>

@@ -67,3 +67,12 @@ Também existe outro problema, como estou querendo melhor a interface e quantida
 Vamos resolver isso
 1 hora depois, alguns problemas tentando fazer as coisas funcionarem da forma mais rapida possivel sem usar o swc(biblioteca da galera da vercel), acabei indo com o fetching padrão e cache mesmo.
 
+Os dados que vem do post, são simpesmente enormes, ele traz coisas linkadas, além do content ser html, o que faz até um pouco de sentido, é uma solução, posso criar uma util pra lidar com essa quantidade de dados, posso até ir por um loop no type já, e lidar só com o que quero, também deveria olhar a documentação e ver se tenho como filtar isso.
+Nem de longe é pesado, mas com certeza é mais do que necessário, nesse cenário.
+
+Estou realmente gastando bastante tempo com a tipagem, isso me lembrou que queria algoritmo python pra transformar json em tipos typescript...
+
+consegui arrumar a responsabilidade, junto com o rendering, e a tipagem, feliz com o resultado, dado a volta com o vite.
+
+Li muito nesses dias, sem duvidas, nextjs e vite são o motivo de react não morrer nos proximos anos, lindo.
+isso por que tentei usar a menor quantidade possivel de bibliotecas

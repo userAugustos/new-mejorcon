@@ -5,6 +5,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'mejorconsalud.as.com'
+      },
+      {
+        protocol: 'https',
         hostname: 'cdn.atomik.vip'
       },
       {

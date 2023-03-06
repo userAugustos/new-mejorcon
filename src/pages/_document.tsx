@@ -1,7 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import {Header} from "@components/header";
+import {useMenuContext} from "@hooks/useMenu";
 
 export default function Document() {
+    const { menuIsOpen } = useMenuContext()
   return (
     <Html lang="en">
         <Head />

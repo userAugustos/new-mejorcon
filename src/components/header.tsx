@@ -25,7 +25,7 @@ export function Header() {
                     </div>
                 </div>
             </button>
-            <Link href='/'>
+            <Link href='/' rel="nofollow">
                 <div className="hover:cursor-pointer flex justify-center items-center">
                     <img
                         src="https://cdn.atomik.vip/themes/mcs/es/logo.svg?auto=webp&quality=45&width=1920&crop=16:9,smart,safe"

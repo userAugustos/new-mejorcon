@@ -63,3 +63,37 @@ a {
   background: rgba(59, 73, 223, 0.10);
   box-shadow: inset 0 0 0 1px rgba(59, 73, 223, 0.10),inset 0 0 0 1px rgba(59, 73, 223, 0.10),inset 0 0 0 1px rgba(59, 73, 223, 0.10);
 }
+
+.bibliography ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.bibliography  > ul > li {
+  margin: 10px 0;
+}
+
+.bibliography  > ul > li > i {
+  text-decoration: underline;
+  color: gray;
+}
+
+.content-container > p {
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+}
+
+.content-container > figure > img {
+  margin: 1rem 0 1rem 0;
+}
+
+.content-container > ul,
+.content-container > ol {
+  margin-left: 20px;
+}
+
+.content-container > ul > li:before,
+.content-container > ol > li:before {
+  content: "•";
+  margin-right: 5px;
+}
