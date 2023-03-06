@@ -1,10 +1,7 @@
-import { GetStaticProps } from "next";
 import { Pages } from "./pages";
-import {StaticProps, pages } from "@pages/home.types";
 import {Card} from "@components/card";
 import {Categories} from "@components/categories";
 import {IPost} from "@pages/post/post.types";
-import {useEffect, useState} from "react";
 
 export default function Recomended({ posts }: { posts: { data: IPost[], pages?: number, size?: number }}) {
     return (

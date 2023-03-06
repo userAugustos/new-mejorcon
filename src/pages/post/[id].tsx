@@ -1,7 +1,7 @@
 import  CategorySVG from '/category.svg'
 import Image from 'next/image'
 import Head from "next/head";
-import {GetServerSideProps, GetStaticProps} from "next";
+import {GetServerSideProps} from "next";
 import {fetch} from "next/dist/compiled/@edge-runtime/primitives/fetch";
 import { singlePost} from "./post.types"
 import { Menu } from '@components/menu'
@@ -12,8 +12,9 @@ export default function Post({ post }: { post: singlePost }) {
     let { menuIsOpen, closeMenu } = useMenuContext()
 
     useEffect(() => {
-            closeMenu()
-    },[])
+      closeMenu()
+    }, [])
+
     return (
         <>
             <Head>
@@ -60,7 +61,7 @@ export default function Post({ post }: { post: singlePost }) {
                         </div>
 
                         {/*author/post data*/}
-                        <div className="col-span-0 lg:col-span-1 max-h-[500px] flex flex-col justify-start items-center">
+                        <div className="col-span-0 px-4 lg:col-span-1 max-h-[500px] flex flex-col justify-start items-center">
                             <section className="flex items-center p-4 bg-white rounded-lg shadow-xs">
                                 {
                                     post.author.picture && (
@@ -78,7 +79,7 @@ export default function Post({ post }: { post: singlePost }) {
                                     </p>
                                 </div>
                             </section>
-                            <section className="bibliography max-w-[310px] my-3 flex items-center p-4 bg-white rounded-lg shadow-xs" dangerouslySetInnerHTML={{__html: post.bibliography}}></section>
+                            <section className="bibliography my-3 flex items-center p-4 bg-white rounded-lg shadow-xs text-wrap" dangerouslySetInnerHTML={{__html: post.bibliography}}></section>
                             <section className="flex justify-between items-center">
                                 { post.tags.length > 0 && post.tags?.map(tag => (
                                     <span key={tag.id}  className="text-gray-500 hover:text-black">@{tag.name}</span>

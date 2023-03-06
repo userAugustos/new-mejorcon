@@ -1,4 +1,4 @@
-import {FormEvent, SetStateAction, useEffect, useState} from "react";
+import {FormEvent, useState} from "react";
 import {Search} from "../utils/search";
 import {Loading} from "@components/loading";
 import {NoFound} from "@components/noFound";
@@ -74,7 +74,7 @@ export function Menu() {
 
             <div className="p-2 mt-6 relative">
                 {loading && <Loading />}
-                {(!loading && posts?.size === 0) || currentPage === 0 && <NoFound />}
+                {!loading && posts?.size === 0 && <NoFound />}
                 {posts.size > 0 && (
                     <ul className="min-w-[300px] w-full max-w-[1200px] max-h-[110vh] relative overflow-hidden flex flex-row justify-center flex-wrap">
                         {

@@ -1,4 +1,4 @@
-import {pages, StaticProps} from "@pages/home.types";
+import {pages } from "@pages/home.types";
 import {useEffect, useMemo, useState} from "react";
 
 export function Pages(){

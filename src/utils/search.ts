@@ -14,7 +14,6 @@ export function Search(searchTerm: string, relevance: boolean = false, page: num
         const controller = new AbortController();
         const signal = controller.signal;
 
-        let timeout = setTimeout(() => {
             setLoading(true);
 
             fetch(`https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts?search=${searchTerm}&per_page=6&page=${page}${relevance && '&orderby=relevance'}`, { signal })
@@ -22,6 +21,7 @@ export function Search(searchTerm: string, relevance: boolean = false, page: num
                     if (response.ok) {
                         return response.json();
                     } else {
+												setLoading(false);
                         throw new Error('Request failed');
                     }
                 })
@@ -35,11 +35,10 @@ export function Search(searchTerm: string, relevance: boolean = false, page: num
                         setLoading(false);
                     }
                 });
-        })
 
         return () => {
             controller.abort();
-            clearTimeout(timeout)
+            // clearTimeout(timeout)
         };
 
     }, [searchTerm, page, relevance]);

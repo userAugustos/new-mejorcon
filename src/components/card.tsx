@@ -14,7 +14,9 @@ export function Card({ post }: { post: IPost} ) {
                         <Image src={post.featured_media?.medium || '/mejorconsalud.jpg'}
                                alt={post.slug}
                                width={400} height={400}
-                               className="inset-0 w-full h-60 object-cover rounded-t" />
+                               className="inset-0 w-full h-60 object-cover rounded-t" 
+															 priority
+															 />
                         <div className="pt-4 pr-4 pl-4">
                             <h4 className="text-lg font-bold text-gray-800 mb-1 text-left">{post.title}</h4>
                             <p className="text-gray-600 text-sm leading-snug text-left">

@@ -27,7 +27,7 @@ export default function Index({ postsByRelevance }: { postsByRelevance: { data: 
 
 
 export const getStaticProps: GetStaticProps = async () => {
-    const postsByRelevance = await fetch("https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts?orderby=relevance").then(response => response.json())
+    const postsByRelevance = await fetch("https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts?orderby=relevance&per_page=10").then(response => response.json())
     return {
         props: {
             postsByRelevance,

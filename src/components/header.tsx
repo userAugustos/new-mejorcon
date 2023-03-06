@@ -30,8 +30,6 @@ export function Header() {
                     <img
                         src="https://cdn.atomik.vip/themes/mcs/es/logo.svg?auto=webp&quality=45&width=1920&crop=16:9,smart,safe"
                         alt="Mejor Salud"
-                        // width={20}
-                        // height={10}
                     />
                 </div>
             </Link>

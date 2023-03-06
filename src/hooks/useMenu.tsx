@@ -1,5 +1,4 @@
-import {createContext, useState} from "react";
-import {Dispatch, SetStateAction, useContext} from "react";
+import {createContext, useState, useContext} from "react";
 
 interface IMenuContext {
     menuIsOpen: boolean,
