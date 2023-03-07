@@ -76,3 +76,5 @@ consegui arrumar a responsabilidade, junto com o rendering, e a tipagem, feliz c
 
 Li muito nesses dias, sem duvidas, nextjs e vite são o motivo de react não morrer nos proximos anos, lindo.
 isso por que tentei usar a menor quantidade possivel de bibliotecas
+
+1 dia depois de entregar a apresentação, eu percebi que deixei passar o melhor funcionamento pro search, o que era essencial, simplesmente, um hook simples e o debounce, e isso está muito mais rapido
