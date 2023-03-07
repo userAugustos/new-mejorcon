@@ -6,9 +6,9 @@ export function Search(searchTerm: string, relevance: boolean = false, page: num
     const [posts, setPosts] = useState<statePost>([] as any);
     const [loading, setLoading] = useState(false);
 
-    console.debug(`https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts?search=${searchTerm}&per_page=6&page=${page}${relevance && '&orderby=relevance'}`)
     useEffect(() => {
         if(searchTerm.length <= 1) {
+						console.debug(searchTerm.length)
             return;
         }
         const controller = new AbortController();

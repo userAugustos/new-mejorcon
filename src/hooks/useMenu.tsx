@@ -1,4 +1,4 @@
-import {createContext, useState, useContext} from "react";
+import {createContext, useState, useContext, ReactElement} from "react";
 
 interface IMenuContext {
     menuIsOpen: boolean,
@@ -12,7 +12,7 @@ export const MenuContext = createContext<IMenuContext>({
     closeMenu: () => {},
 })
 
-export function MenuContextProvider({ children }: { children: any}) {
+export function MenuContextProvider({ children }: { children: ReactElement | Iterable<ReactElement> }) {
     const [ menuIsOpen, setMenuIsOpen ] = useState(false);
 
     const sweepMenu = () => {
