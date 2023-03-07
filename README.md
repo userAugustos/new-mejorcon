@@ -42,8 +42,8 @@ Então vamos lá:
   - [x] Dark Mode
   - [x] Header Como a do site oficial
   - [x] Mudar os posts da página inical para ficar como do dev.to (acho bem legal)
-  - [ ] Alterar posição de itens na leitura de um post
-  - [ ] Remover completamente aquela seção infinita de posts sugeridos no fim de post (ou é anúncio, não sei)
+  - [x] Alterar posição de itens na leitura de um post
+  - [x] Remover completamente aquela seção infinita de posts sugeridos no fim de post (ou é anúncio, não sei)
 
 Dia 2 e sem duvidas, o maior problema é a curva de aprendizado com tailwind, pra fazer algo bonito e responsivo, os componentes prontos em coisas como de codesandbox ou tailwindcomponents, não são tão úties, te destraem e precisam de adaptação pra ser uma solução que faça sentido
 
